@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - LearnSpot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #007bff !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .nav-link {
+            position: relative;
+            padding: 10px 15px;
+            transition: background 0.3s ease;
+        }
+        .nav-item {
+            margin-right: 10px;
+        }
+        .nav-link:hover {
+            background: linear-gradient(90deg, #000000, #007bff);
+            border-radius: 5px;
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .search-bar input {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin-right: 10px;
+            outline: none;
+        }
+        .search-bar button {
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .search-bar button:hover {
+            background-color: #f8f9fa;
+        }
+        .course-header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .course-header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .course-content {
+            padding: 40px 20px;
+        }
+        .course-content h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .course-content p {
+            color: #555;
+            line-height: 1.8;
+        }
+        .course-syllabus, .course-highlights, .instructor-details, .testimonials, .faq {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .course-syllabus h3, .course-highlights h3, .instructor-details h3, .testimonials h3, .faq h3 {
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+        .course-syllabus ul, .course-highlights ul, .faq ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-syllabus ul li, .course-highlights ul li, .faq ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .course-syllabus ul li:last-child, .course-highlights ul li:last-child, .faq ul li:last-child {
+            border-bottom: none;
+        }
+        .instructor-details .instructor {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .instructor-details .instructor img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .testimonials .testimonial {
+            margin-bottom: 20px;
+        }
+        .testimonials .testimonial p {
+            font-style: italic;
+            color: #777;
+        }
+        .testimonials .testimonial .author {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .enroll-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .enroll-button .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .enroll-button .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007bff;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LearnSpot</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search courses...">
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html">
+                            <button class="nav-link btn" style="background-color: red; text-decoration: none;">Login</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Header -->
+    <div class="course-header">
+        <div class="container">
+            <h1>Web Development Course</h1>
+            <p>Master the art of building modern websites and web applications.</p>
+        </div>
+    </div>
+
+    <!-- Course Content -->
+    <div class="course-content">
+        <div class="container">
+            <h2>About the Course</h2>
+            <p>
+                This comprehensive course is designed to take you from a beginner to an advanced web developer. You'll learn the fundamentals of HTML, CSS, JavaScript, and more. By the end of the course, you'll be able to build responsive, dynamic, and interactive websites.
+            </p>
+
+            <!-- Course Highlights -->
+            <div class="course-highlights">
+                <h3>Course Highlights</h3>
+                <ul>
+                    <li>Hands-on projects and assignments</li>
+                    <li>Lifetime access to course materials</li>
+                    <li>Certificate of completion</li>
+                    <li>24/7 support and mentorship</li>
+                </ul>
+            </div>
+
+            <!-- Course Syllabus -->
+            <div class="course-syllabus">
+                <h3>Course Syllabus</h3>
+                <ul>
+                    <li>Introduction to Web Development</li>
+                    <li>HTML5: Structure and Semantics</li>
+                    <li>CSS3: Styling and Layouts</li>
+                    <li>JavaScript: Basics to Advanced</li>
+                    <li>Responsive Design with Bootstrap</li>
+                    <li>Introduction to Backend Development</li>
+                    <li>Deploying Websites</li>
+                </ul>
+            </div>
+
+            <!-- Instructor Details -->
+            <div class="instructor-details">
+                <h3>Instructor</h3>
+                <div class="instructor">
+                    <img src="https://via.placeholder.com/100" alt="Instructor">
+                    <div>
+                        <h4>John Doe</h4>
+                        <p>John is a seasoned web developer with over 10 years of experience in building scalable and responsive web applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="testimonials">
+                <h3>What Our Students Say</h3>
+                <div class="testimonial">
+                    <p>"This course completely transformed my understanding of web development. Highly recommended!"</p>
+                    <p class="author">- Jane Smith</p>
+                </div>
+                <div class="testimonial">
+                    <p>"The instructor is very knowledgeable, and the course content is well-structured."</p>
+                    <p class="author">- Mike Johnson</p>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="faq">
+                <h3>Frequently Asked Questions</h3>
+                <ul>
+                    <li>
+                        <strong>Q: Is this course suitable for beginners?</strong>
+                        <p>A: Yes, this course is designed for both beginners and experienced developers.</p>
+                    </li>
+                    <li>
+                        <strong>Q: Do I need any prior knowledge?</strong>
+                        <p>A: No prior knowledge is required. We start from the basics.</p>
+                    </li>
+                    <li>
+                        <strong>Q: Will I get a certificate after completing the course?</strong>
+                        <p>A: Yes, you will receive a certificate of completion.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Enroll Button -->
+            <div class="enroll-button">
+                <a href="#" class="btn">Enroll Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center" style="background-color: #007bff; color: #fff; padding: 20px 0; margin-top: 40px;">
+        <div class="container">
+            <h3>LearnSpot</h3>
+            <p>Your gateway to mastering technology and innovation.</p>
+            <div class="social-icons">
+                <a href="#" class="fab fa-facebook"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-youtube"></a>
+            </div>
+            <p>&copy; 2025 LearnSpot. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

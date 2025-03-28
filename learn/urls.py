@@ -22,8 +22,11 @@ from app1 import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.login,name='Login'),
+    path('',views.login_User,name='Login'),
     path('Register/',views.register),
+    path('Main/',views.main,name="Learnspot"),
+    path('Course/',views.Course,name='View more')
+
 ]
 
 
